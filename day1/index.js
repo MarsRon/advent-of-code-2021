@@ -1,5 +1,5 @@
 // Day 1
-// https://adventofcode.com/2021/leaderboard/day/1
+// https://adventofcode.com/2021/day/1
 
 const { readFileSync } = require('fs')
 const path = require('path')
@@ -10,6 +10,7 @@ const path = require('path')
 const inputFilePath = path.join(__dirname, 'input.txt')
 const input = readFileSync(inputFilePath)
   .toString()
+  .trim()
   .split('\n')
   .map(string => Number(string))
 
