@@ -7,8 +7,7 @@ const path = require('path')
 // Read input file
 // Split by newlines
 const inputFilePath = path.join(__dirname, 'input.txt')
-const input = readFileSync(inputFilePath)
-  .toString()
+const input = readFileSync(inputFilePath, 'utf8')
   .trim() // remove final newline
   .split('\n')
 

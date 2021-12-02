@@ -5,13 +5,13 @@ const { readFileSync } = require('fs')
 const path = require('path')
 
 // Read input file
-// split by newlines
-// Turn string into numbers
+// Split by newlines
 const inputFilePath = path.join(__dirname, 'input.txt')
-const input = readFileSync(inputFilePath)
-  .toString()
-  .trim()
+const input = readFileSync(inputFilePath, 'utf8')
+  .trim() // remove final newline
   .split('\n')
+
+  // Turn string into numbers
   .map(string => Number(string))
 
 // Part 1
