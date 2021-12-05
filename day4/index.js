@@ -43,6 +43,8 @@ const boards = input.map(string =>
   )
 )
 
+const t1 = performance.now()
+
 // Part 1
 
 // Mutate the marked value of the number, shouldn't've done this smh
@@ -137,6 +139,7 @@ const getLastWinningBoard = (boards, draws) => {
   console.log(`Part 2: ${number.value * unmarkedNumbers}`)
 }
 
-const t1 = performance.now()
+const t2 = performance.now()
 
-console.log(`${(t1 - t0).toLocaleString()}ms`)
+console.log(`Parsing: ${(t1 - t0).toLocaleString()}ms`)
+console.log(`Part 1 & 2: ${(t2 - t0).toLocaleString()}ms`)
